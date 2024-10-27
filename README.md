@@ -14,3 +14,62 @@ La evaluación tiene como objetivo evaluar los conocimientos de los estudiantes 
 ## **Requerimientos:**
 
 La aplicación debe interactuar con el usuario y permitirle elegir las acciones a ejecutar, de la siguiente manera.
+### **Menú Principal**
+
+El menú principal debe mostrar tres posibles opciones: 
+
+1. Listar archivos presentes en la ruta actual o ingresar una ruta donde buscar los archivos.
+2. Procesar archivo de texto (.txt)
+3. Procesar archivo separado por comas (.csv)
+4. Salir
+
+**Submenú para archivos de texto (.txt)**
+
+- Debe proporcionar las siguientes opciones, donde cada opción llama a una **función** realizada para el caso específico:
+    - **Contar número de palabras**: Debe contar el número de palabras en el archivo de texto y mostrar el resultado.
+    - **Reemplazar una palabra por otra**: Debe permitir al usuario reemplazar una palabra por otra en el archivo de texto. La función debe recibir tanto la palabra a buscar, como la palabra por la que se tiene que reemplazar.
+    - **Contar el número de caracteres:** El programa debe calcular dos valores. El primero es el número total de caracteres, incluidos los espacios en blanco, y el segundo es el número de caracteres sin contar los espacios en blanco. Ambos resultados deben ser mostrados.
+
+**Submenú para archivos .csv**
+
+- Debe proporcionar las siguientes opciones, donde cada opción llama a una **función** realizada para el caso específico:
+    - **Mostrar las 15 primeras filas**: con el fin de tener un vistazo rápido del documento que se va a analizar, esta función le permite al usuario observar el contenido de las primeras 15 líneas del archivo. Así, el usuario podrá decidir sus próximas acciones.
+    - **Calcular Estadísticas**: el usuario le pasa a la función cuál es la columna que quiere seleccionar, de ese modo, la función calcula el número de datos, el promedio, la mediana, el valor máximo y el mínimo de dicha columna y retorna el resultado, para ser mostrado en la función principal (*main()*).
+    - **Graficar una columna completa con los datos**: Debe permitir al usuario elegir una columna de datos numéricos y mostrar una gráfica con los datos.
+
+**Otras opciones**
+
+- Los estudiantes deben discutir con el profesor otras opciones posibles que pueden ser útiles para trabajar con archivos de texto y archivos .csv.
+
+# **Evaluación**
+
+La evaluación se realizará con base en la implementación correcta de los requerimientos mencionados anteriormente. Se evaluarán los siguientes aspectos:
+
+- Correcta implementación de la lógica de programación.
+- Uso correcto de las bibliotecas estándar de Python (por ejemplo, `csv` para trabajar con archivos separados por comas).
+- Claridad y legibilidad del código.
+- Funcionalidad y usabilidad de la aplicación.
+
+  ## ⚠️ Sustentación del trabajo
+
+El trabajo debe ser sustentado de manera efectiva, ya que la nota principal se basa en la calidad de la sustentación del código. Asegúrense de que su trabajo sea claro y conciso, y que puedan defender y explicar su código de manera convincente. Recuerden que lo importante no es simplemente entregar un código que funcione correctamente, sino que también sean capaces de sustentar y explicar su lógica y diseño.
+
+**Sustentación del Proyecto**
+
+La sustentación se realizará mediante una conversación con el profesor o con un video de duración aproximada de 8 minutos. El objetivo es presentar una explicación clara y concisa de las funciones del código.
+
+**Lo que se debe hacer:**
+
+- Explicar cómo organizaron el código
+• Mostrar el uso de condicionales, bucles y listas
+• Demostrar el uso de métodos específicos para manejar cadenas de caracteres o datos separados por comas, etc.
+
+**Lo que no se debe hacer:**
+
+- No explicar cosas obvias
+• No se debe explicar el objetivo del reto (el profesor ya lo conoce)
+• No se debe explicar detalles innecesarios
+
+## Plazo de entrega
+
+La evaluación se realizará en un plazo de 2 semanas. El ***deadline*** se publicará en repositorio de GitHub.
