@@ -10,16 +10,20 @@ Opcion = Ingrese opcion del 1 al 4
 
 
 Si Opcion == 1 
+
     "FUNCION PARA BUSCAR LOS ARCHIVOS"
     Ejecutar la funcion
     Imprimir los archivos
 
 
+
 Si Opcion == 2
+
     Imprimir 1--Contar número de palabras
     Imprimir 2--Reemplazar una palabra por otra
     Imprimir 3--Contar el número de caracteres
     Numero = Ingrese el numero del 1 al 3
+
         Si Numero == 1
             "FUNCION CONTAR PALABRAS (Len)
         Si Numero == 2
@@ -32,6 +36,7 @@ Si Opcion == 2
 
 
 Si Opcion == 3
+
     Imprimir 1--Mostrar las 15 primeras filas
     Imprimir 2--Calcular Estadísticas
     Imprimir 3--Graficar una columna completa con los datos
