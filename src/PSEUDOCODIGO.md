@@ -12,6 +12,12 @@ Opcion = Ingrese opcion del 1 al 4
 Si Opcion == 1 
 
     "FUNCION PARA BUSCAR LOS ARCHIVOS"
+        "Con el metodo posiblemente open, realizamos un bucle donde se busque en cada carpeta los archivos .txt o .csv, y/o Ingresar la ruta en donde buscar los archivos y estos ingresarlos en una lista, y al finalizar imprimir la lista"
+
+        "Realizr una busqueda en la carpeta actual y posterior que ingrese a las carpetas en la carpeta actual. reliazar bucle"
+
+
+
     Ejecutar la funcion
     Imprimir los archivos
 
@@ -50,3 +56,5 @@ Si Opcion == 3
             "Funcion de Graficar columna de datos" 
         SiNo  
             Imprimir "Opcion no valida"
+
+
