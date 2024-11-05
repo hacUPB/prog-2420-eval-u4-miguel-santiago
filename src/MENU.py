@@ -1,15 +1,15 @@
-from FUNCION2 import contar_palabras  #Se ejecuta solo al inicio
+from FUNCION2 import contar_palabras
 
 def mostrar_menu(opciones):
-    print("Seleccione una opcion")
+    print("Seleccione una opción")
     for i in opciones:
         print(f"{i}) {opciones[i][0]}") 
 
 def leer_opcion(opciones):
-    Numero = input("Digite su opcion : ")
+    Numero = input("Digite su opción: ")
     while Numero not in opciones:
-        print("Opcion no valida, regresando al inicio") 
-        Numero = input("Digite su opcion : ")
+        print("Opción no válida, regresando al inicio") 
+        Numero = input("Digite su opción: ")
     return Numero
 
 def ejecutar_menu(opcion, opciones): 
@@ -23,7 +23,7 @@ def generar_menu(opciones, opcion_salida):
         ejecutar_menu(opcion, opciones)
         print()
 
-def menu(): #Uso un diccionario para llamar cada opcion creada por el menu
+def menu():
     opciones = {
         "1": ("Listar archivos o conocer la ruta para buscarlos", eleg1),
         "2": ("Procesar archivos .txt", eleg2),
@@ -33,14 +33,14 @@ def menu(): #Uso un diccionario para llamar cada opcion creada por el menu
     generar_menu(opciones, "4")
 
 def eleg1():
-    print("Elegiste la opcion 1")
+    print("Elegiste la opción 1")
 
 def eleg2():
-    print("Elegiste la opción 2: Contar palabras en un archivo.")  # Mensaje corregido
+    print("Elegiste la opción 2: Contar palabras en un archivo.")
     contar_palabras()  # Llamada a contar_palabras
 
 def eleg3():
-    print("Elegiste la opcion 3")
+    print("Elegiste la opción 3")
 
 def salida():
     print("Saliendo")
