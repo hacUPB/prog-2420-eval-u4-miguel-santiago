@@ -34,15 +34,53 @@ def menu():#Diccionario de las opciones a elegir junto con las tuplas que llaman
     }
     generar_menu(opciones, "4") #Aqui es como genero la salida indicando el numero de opciones e imprimiendo cada diccionario junto con la funcion salida del menu
 
-def eleg1():
-    print("Elegiste la opción 1")
+def sub_menu2():
+    opciones2 = {
+        "A": ("Contar palabras del arcivho .txt", Eleccion1),
+        "B": ("Remplazar palabras del arcivho .txt", Eleccion2),
+        "C": ("Contar numero de caracteres del arcivho .txt", Eleccion3),
+        "D": ("Volver al menu principal", Salida)
+        
+    }
+    
+    generar_menu("sub_menu2", opciones2, "C")
 
+
+
+
+def eleg1():
+    print("Elegiste Listar archivos o buscarlos")
+
+def eleg2():
+    print("Elegiste Procesar archivos .csv")
+
+    
+    
 def eleg3():
-    print("Elegiste la opción 3")
+    print("Elegiste Procesar archivos .csv")
 
 def salida():
     print("Saliendo")
+   
+   
+#Realizo las otras funciones para llamar al submenu dentro del menu 
+
+def Eleccion1():
+    print("Elegiste contar numero de palabras")
+
+def Eleccion2():
+    print("Elegiste remplazar una palabra")
+    contar_palabras()
+    
+    
+    
+def Eleccion3():
+    print("Elegiste contar numero de caracteres")
+
+def Salida():
+    print("Saliendo al menu principal")
+    
+    
 
 if __name__ == "__main__":
     menu()
-
