@@ -5,7 +5,7 @@
 def contar_palabras():  ##Arreglar
     filename = input("Ingrese la dirección del texto (no olvidar poner .txt): ")
     try:
-        with open(filename, 'r+') as f_obj:
+        with open(filename, 'r') as f_obj:
             contenido = f_obj.read()
     except FileNotFoundError:
         print(f"El archivo {filename} no existe.")
@@ -18,6 +18,8 @@ def contar_palabras():  ##Arreglar
 contar_palabras()
 
 
+
+ 
 
 
 def reemplazar_palabra():
@@ -43,3 +45,6 @@ def reemplazar_palabra():
     print(nuevo_contenido)
 
 reemplazar_palabra()
+
+if __name__=="__main__":
+    contar_palabras()
