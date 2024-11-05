@@ -9,7 +9,7 @@ def leer_opcion(opciones):
     Numero = input("Digite su opción: ")
     while Numero not in opciones:
         print("Opción no válida, regresando al inicio") 
-        Numero = input("Digite su opción: ")
+        Numero = input("Digite su opción: ").strip()
     return Numero
 
 def ejecutar_menu(opcion, opciones): 
@@ -47,3 +47,4 @@ def salida():
 
 if __name__ == "__main__":
     menu()
+
