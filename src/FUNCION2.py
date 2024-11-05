@@ -49,4 +49,4 @@ def reemplazar_palabra():
 reemplazar_palabra()
 
 if __name__=="__main__":
-    contar_palabras()
+    reemplazar_palabra()
