@@ -37,43 +37,6 @@ def menu():#Diccionario de las opciones a elegir junto con las tuplas que llaman
 def eleg1():
     print("Elegiste la opción 1")
 
-def eleg2():
-    def menu_mostrar(opciones):
-    print("Seleccione una opción")
-    for i in opciones:
-        print(f"{i}) {opciones[i][0]}") 
-
-def leer_opcion(opciones2):
-    Numero2 = input("Digite su opción: ")
-    while Numero2 not in opciones:
-        print("Opción no válida, regresando al inicio") 
-        Numero2 = input("Digite su opción: ").strip()
-    return Numero2
-
-def ejecutar_menu(opcion, opciones2): 
-    opciones2[opcion][1]()  # Llama a la función correspondiente a la opción seleccionada
-
-def generar_menu(opciones, opcion_salida):
-    opcion = None
-    while opcion != opcion_salida:
-        mostrar_menu(opciones)
-        opcion = leer_opcion(opciones)
-        ejecutar_menu(opcion, opciones)
-        print()
-
-def menu():
-    opciones2 = {
-        "1": ("Listar archivos o conocer la ruta para buscarlos", eleg1),
-        "2": ("Procesar archivos .txt", eleg2),
-        "3": ("Procesar archivos .csv", eleg3),
-        "4": ("Salir", salida)
-    }
-    generar_menu(opciones, "4")
-
-    
-    print("Elegiste la opción 2: Contar palabras en un archivo.")
-    contar_palabras()  # Llamada a contar_palabras
-
 def eleg3():
     print("Elegiste la opción 3")
 
