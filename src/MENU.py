@@ -6,11 +6,16 @@ def mostrar_menu(opciones):
         print(f"{i}) {opciones[i][0]}")#Imprimo cada i el cual es la clave de cada diccionario y asi despues poder llamar la tupla y separarlo desde la columna 0 y asi llamar la funcion mas adelante
 
 def leer_opcion(opciones):
-    Numero = input("Digite su opción: ") #Con una variable indico la opcion que se debe digitar
+    Numero = input("Digite su opción: ").strip() #Con una variable indico la opcion que se debe digitar
     while Numero not in opciones:
         print("Opción no válida, regresando al inicio")  #Creo un bucle con el while para que el numero que si digite o la opcion, sea correcta y se encuentre dentro del diccionario opciones
         Numero = input("Digite su opción: ").strip() #Digito nuevamente el numero para asegurar de cumpli con el bucle hasta poner la opcion correcta y adiciono el strip por un error cuando corria el codgio y funciono entonces lo dejo 
-    return Numero                              #strip es para eliminar los espacios en blanco cuando se digite
+    return Numero 
+
+
+
+
+#strip es para eliminar los espacios en blanco cuando se digite
 
 def ejecutar_menu(opcion, opciones): 
     opciones[opcion][1]()  # ejecuto el menu con la funciones adentro que voy a llamar, las cuales son opcion y opciones para asi llamar opciones el diccionario, e imprimo todo el menu por medio de las tuplas del diccionario donde la primera
@@ -28,8 +33,8 @@ def generar_menu(opciones, opcion_salida): #Asi genero el menu donde empiezo a l
 def menu():#Diccionario de las opciones a elegir junto con las tuplas que llaman a cierta funcion cuando se digita el numero de la opccion
     opciones = {
         "1": ("Listar archivos o conocer la ruta para buscarlos", eleg1),
-        "2": ("Procesar archivos .txt", eleg2),
-        "3": ("Procesar archivos .csv", eleg3),
+        "2": ("Procesar archivos .txt", sub_menu2),
+        "3": ("Procesar archivos .csv", sub_menu3),
         "4": ("Salir", salida)
     }
     generar_menu(opciones, "4") #Aqui es como genero la salida indicando el numero de opciones e imprimiendo cada diccionario junto con la funcion salida del menu
@@ -43,7 +48,18 @@ def sub_menu2():
         
     }
     
-    generar_menu("sub_menu2", opciones2, "C")
+    generar_menu(opciones2, "D")
+    
+def sub_menu3():
+    opciones3 = {
+        "A1": ("Mostrar las 15 primeras filas", EleccionA1),
+        "A2": ("Calcular estadisticas", EleccionA2),
+        "A3": ("Graficar una columna", EleccionA3),
+        "A4": ("Volver al menu principal", SALIDA)
+        
+    }
+    
+    generar_menu(opciones3, "A4")
 
 
 
@@ -52,7 +68,7 @@ def eleg1():
     print("Elegiste Listar archivos o buscarlos")
 
 def eleg2():
-    print("Elegiste Procesar archivos .csv")
+    print("Elegiste Procesar archivos .txt")
 
     
     
@@ -79,6 +95,26 @@ def Eleccion3():
 
 def Salida():
     print("Saliendo al menu principal")
+    
+    
+    #Otras funciones para llamar al submenu3
+    
+    
+def EleccionA1():
+    print("Elegiste contar numero de palabras")
+
+def EleccionA2():
+    print("Elegiste remplazar una palabra")
+    contar_palabras()
+    
+    
+    
+def EleccionA3():
+    print("Elegiste contar numero de caracteres")
+
+def SALIDA():
+    print("Saliendo al menu principal")
+    
     
     
 
