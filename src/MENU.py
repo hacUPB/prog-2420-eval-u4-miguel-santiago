@@ -1,4 +1,5 @@
-from FUNCION2 import contar_palabras
+from FUNCION2 import *
+from FUNCION3 import *
 
 def mostrar_menu(opciones):
     print("Seleccione una opción")#Genero una funcion donde genero las opciones del menu y las muestro con la variable i para que asi recorra cada una de las claves en el diccionario llamado "opciones" 
