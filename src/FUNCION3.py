@@ -20,31 +20,10 @@ def contenido_de_primeras_15_filas():
 contenido_de_primeras_15_filas()
 
 
-
-import csv
-
-def contenido_de_primeras_15_filas():
-    # Solicitar la ubicación del archivo
-    ubicacion_archivo = input("Ingrese la dirección del archivo con la terminación (.csv): ")
-    
-    try:
-        # Intentamos abrir el archivo
-        with open(ubicacion_archivo, 'r', newline='', encoding='utf-8') as csvfile:
-            # Intentamos leer el archivo con el delimitador común (coma por defecto)
-            datos = csv.reader(csvfile)
-    except FileNotFoundError:
-        print(f"El archivo en {ubicacion_archivo} no existe.")
-    except Exception as e:
-        print(f"Ocurrió un error al abrir el archivo: {e}")
-    else:
-        contador = 0
-        # Iteramos sobre las filas del CSV
-        for fila in datos:
-            if contador < 15:
-                print(fila)  # Imprime cada fila
-                contador += 1
-            else:
-                break  # Sale después de imprimir las 15 filas
-        return
-
 contenido_de_primeras_15_filas()
+def calular_estadistica():
+
+
+
+def graficar():
+    
