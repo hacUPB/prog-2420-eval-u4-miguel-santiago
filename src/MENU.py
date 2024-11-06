@@ -1,13 +1,14 @@
 from FUNCION2 import *
 from FUNCION3 import *
 
+
 def mostrar_menu(opciones):
     print("Seleccione una opción")#Genero una funcion donde genero las opciones del menu y las muestro con la variable i para que asi recorra cada una de las claves en el diccionario llamado "opciones" 
     for i in opciones:
         print(f"{i}) {opciones[i][0]}")#Imprimo cada i el cual es la clave de cada diccionario y asi despues poder llamar la tupla y separarlo desde la columna 0 y asi llamar la funcion mas adelante
 
 def leer_opcion(opciones):
-    Numero = input("Digite su opción: ").strip() #Con una variable indico la opcion que se debe digitar
+    Numero = input("Digite su opción: ").strip().upper() #Con una variable indico la opcion que se debe digitar
     while Numero not in opciones:
         print("Opción no válida, regresando al inicio")  #Creo un bucle con el while para que el numero que si digite o la opcion, sea correcta y se encuentre dentro del diccionario opciones
         Numero = input("Digite su opción: ").strip() #Digito nuevamente el numero para asegurar de cumpli con el bucle hasta poner la opcion correcta y adiciono el strip por un error cuando corria el codgio y funciono entonces lo dejo 
@@ -84,15 +85,17 @@ def salida():
 
 def Eleccion1():
     print("Elegiste contar numero de palabras")
+    contar_palabras()
 
 def Eleccion2():
     print("Elegiste remplazar una palabra")
-    contar_palabras()
+    reemplazar_palabra()
     
     
     
 def Eleccion3():
     print("Elegiste contar numero de caracteres")
+    contar_numero_de_caracteres()
 
 def Salida():
     print("Saliendo al menu principal")
@@ -102,16 +105,18 @@ def Salida():
     
     
 def EleccionA1():
-    print("Elegiste contar numero de palabras")
+    print("Elegiste mostrar las 15 primeras filas")
+    contenido_de_primeras_15_filas()
 
 def EleccionA2():
-    print("Elegiste remplazar una palabra")
-    contar_palabras()
+    print("Elegiste calcular Estadísticas")
+    calcular_estadistica()
     
     
     
 def EleccionA3():
-    print("Elegiste contar numero de caracteres")
+    print("Elegiste graficar una columna completa con los datos")
+    graficar()
 
 def SALIDA():
     print("Saliendo al menu principal")
