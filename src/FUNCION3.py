@@ -32,7 +32,7 @@ def contenido_de_primeras_15_filas():
 contenido_de_primeras_15_filas()
 
 
-contenido_de_primeras_15_filas()
+
 def calular_estadistica():
 
 
