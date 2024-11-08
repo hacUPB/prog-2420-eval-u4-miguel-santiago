@@ -34,7 +34,46 @@ contenido_de_primeras_15_filas()
 
 
 
-def calular_estadistica():
+import csv
+import matplotlib.pyplot as gra
+import os
+
+def estadistica()
+
+
+    try:
+
+        ruta_archivo = os.path.abspath(__file__)
+        Archivo = input("Ingrese el nombre del archivo CSV: ").strip()
+        ruta_de_documento = os.path.join(os.path.dirname(ruta_archivo), Archivo)
+
+        with open(ruta_de_documento,'r', encoding='utf-8') as CSv:
+            c = input("Ingrese con que caracter requiere delimitar las columnas")
+            leer = csv.reader(CSv,delimiter=c )
+            Columnas = next(leer)
+            print("Las columnas disponibles son")
+            columna = input("Que columna desea realizar la estadistica? Escribe el nombre de la columna: ").upper().strip()
+
+
+        if columna in Columnas:
+            Numero = Columnas.index(columna)#Me dice la posicion de la columna
+            datos = []
+
+            #Hasta aqui es el mismo codigo que la funcion de graficar
+            #Se identifican las columnas y se selecciona una
+
+        for fila in leer:
+            try:
+                valor = float(fila[Numero])  # Si el valor no es un numero, aqui se convierte con float para poderlo graficar
+                datos.append(valor)  # Se agrega el valor a datos que esta vacio
+            except ValueError:
+                 
+                continue
+            
+            #Hasta aqui es el mismo codigo que la funcion de graficar
+            #Se identifican las columnas y se selecciona una
+
+            #Aqui inicia el nuevo codigo base para las estadisticas
 
 
 
