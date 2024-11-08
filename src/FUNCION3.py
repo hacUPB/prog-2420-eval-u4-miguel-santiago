@@ -1,7 +1,8 @@
 #LO PEDIDO:
 #Mostrar las 15 primeras filas: con el fin de tener un vistazo rápido del documento que se va a analizar, esta función le permite al usuario observar el contenido de las primeras 15 líneas del archivo. Así, el usuario podrá decidir sus próximas acciones.
-import os
 import csv
+import matplotlib.pyplot as gra
+import os
 
 def contenido_de_primeras_15_filas():
     try:
@@ -36,17 +37,10 @@ contenido_de_primeras_15_filas()
 def calular_estadistica():
 
 
-    import csv
 
-import os
 
 def graficar():
 
-
-
-
-
-   
 
     try:
 
@@ -59,74 +53,33 @@ def graficar():
             leer = csv.reader(CSv,delimiter=b )
             Columnas = next(leer)
             print("Las columnas disponibles son")
-            for C,Columnas in enumerate(Columnas, start= 1 ): 
-                print (f"{C}. {Columnas}")
-                print()
-
             columna = input("Que columna desea graficar? Escribe el nombre de la columna: ").upper().strip()
-            if columna in Columnas:
-                Numero_columna = Columnas.index(columna)#Me dice la posicion de la columna
-                print(Numero_columna)
 
-            if columna in [columna.upper() for columna in Columnas]:  # Verificar si la columna existe
-                Numero_columna = Columnas.index(columna)  # Obtener el índice de la columna
-                print(f"La columna seleccionada es: {columna} (Índice {Numero_columna})")
-                
-                # Leer todas las filas y obtener los datos de la columna seleccionada
-                datos_columna = []
-                for fila in leer:
-                    try:
-                        # Convertir los datos a número (float) si es posible
-                        datos_columna.append(float(fila[Numero_columna]))
-                    except ValueError:
-                        # Si no es un número válido, puedes ignorar o manejar el error de alguna manera
-                        continue
 
-                if datos_columna:
-                    # Graficar los datos
-                    plt.plot(datos_columna)
-                    plt.title(f"Gráfico de la columna: {columna}")
-                    plt.xlabel('Índice de fila')
-                    plt.ylabel(f'Valores de {columna}')
-                    plt.show()
-                else:
-                    print(f"No se pudieron obtener datos numéricos de la columna '{columna}'.")
+        if columna in Columnas:
+            Numero = Columnas.index(columna)#Me dice la posicion de la columna
+            datos = []
+
+            
+
+            for fila in leer:
+                try:
+                    valor = float(fila[Numero])  # Si el valor no es un numero, aqui se convierte con float para poderlo graficar
+                    datos.append(valor)  # Se agrega el valor a datos que esta vacio
+                except ValueError:
+                 
+                    continue
+            
+            # Se Grafican los datos, se deben probar muy bien para que los resultados deseados sean los correctos
+            if datos:
+                gra.plot(datos)
+                gra.title(f"Gráfico de la columna: {columna}")
+                gra.show()
             else:
-                print(f"La columna '{columna}' no existe en el archivo.")
+                print("No hay datos numéricos en la columna seleccionada.")
+        else:
+            print("La columna no existe en el archivo.")
 
-    except FileNotFoundError:
-        print("El archivo no fue encontrado. Asegúrate de que el nombre sea correcto.")
-    except Exception as e:
-        print(f"Ocurrió un error: {e}")
 
-# Llamada a la función para graficar
 graficar()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    except FileNotFoundError:
-        print("El archivo no fue encontrado. Asegúrate de que el nombre sea correcto.")
-    
-graficar()
-
-
-
-
-def graficar():
     
