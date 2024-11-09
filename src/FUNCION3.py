@@ -30,7 +30,7 @@ def contenido_de_primeras_15_filas():
     except Exception as e:
         print(f"Ocurrió un error: {e}")
         
-contenido_de_primeras_15_filas()
+
 
 
 
