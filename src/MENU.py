@@ -1,4 +1,3 @@
-from FUNCION2 import *
 from FUNCION3 import *
 from FUNCION1 import *
 
@@ -43,27 +42,26 @@ def menu():#Diccionario de las opciones a elegir junto con las tuplas que llaman
     }
     generar_menu(opciones, "4") #Aqui es como genero la salida indicando el numero de opciones e imprimiendo cada diccionario junto con la funcion salida del menu
 
+# Submenú 2 - MENU.py
 def sub_menu2():
     opciones2 = {
-        "A": ("Contar palabras del arcivho .txt", Eleccion1),
-        "B": ("Remplazar palabras del arcivho .txt", Eleccion2),
-        "C": ("Contar numero de caracteres del arcivho .txt", Eleccion3),
-        "D": ("Volver al menu principal", Salida)
-        
+        "A": ("Contar palabras del archivo .txt", Eleccion1),
+        "B": ("Reemplazar palabras del archivo .txt", Eleccion2),
+        "C": ("Contar número de caracteres del archivo .txt", Eleccion3),
+        "D": ("Volver al menú principal", Salida)
     }
-    
     generar_menu(opciones2, "D")
-    
+
+# Submenú 3 - MENU.py
 def sub_menu3():
     opciones3 = {
         "A1": ("Mostrar las 15 primeras filas", EleccionA1),
-        "A2": ("Calcular estadisticas", EleccionA2),
+        "A2": ("Calcular estadísticas", EleccionA2),
         "A3": ("Graficar una columna", EleccionA3),
-        "A4": ("Volver al menu principal", SALIDA)
-        
+        "A4": ("Volver al menú principal", Salida)
     }
-    
     generar_menu(opciones3, "A4")
+    
 
 
 
