@@ -110,7 +110,7 @@ def EleccionA1():
 
 def EleccionA2():
     print("Elegiste calcular Estadísticas")
-    calcular_estadistica()
+    def estadistica()
     
     
     
