@@ -138,5 +138,5 @@ def graficar():
             print("La columna no existe en el archivo.")
 
 
-graficar()
+
     
