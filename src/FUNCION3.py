@@ -32,16 +32,7 @@ def contenido_de_primeras_15_filas():
         
 
 
-
-
-import csv
-import matplotlib.pyplot as gra
-import os
-
-import csv
-
-
-def estadistica()
+def estadistica():
 
 
     try:
@@ -94,6 +85,9 @@ def estadistica()
 
                 print (f"El valor maximo es {Maximo}, y el valor minimo es {Minimo} ")
                 print (f"El promedio es {Prome}, y la mediana es {Mediana} ")
+    except FileNotFoundError:
+        print("El archivo CSV no se encontró en la ruta especificada.")
+                
 
 
 def graficar():
@@ -136,6 +130,14 @@ def graficar():
                 print("No hay datos numéricos en la columna seleccionada.")
         else:
             print("La columna no existe en el archivo.")
+            
+    except FileNotFoundError:
+        print("El archivo CSV no se encontró en la ruta especificada.")
+
+
+
+    
+
 
 
 
