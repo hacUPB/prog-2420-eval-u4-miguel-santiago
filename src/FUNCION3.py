@@ -38,6 +38,9 @@ import csv
 import matplotlib.pyplot as gra
 import os
 
+import csv
+
+
 def estadistica()
 
 
@@ -50,7 +53,7 @@ def estadistica()
         with open(ruta_de_documento,'r', encoding='utf-8') as CSv:
             c = input("Ingrese con que caracter requiere delimitar las columnas")
             leer = csv.reader(CSv,delimiter=c )
-            Columnas = next(leer)
+            Columnas = next(leer) #Realiza el salto entre columnas
             print("Las columnas disponibles son")
             columna = input("Que columna desea realizar la estadistica? Escribe el nombre de la columna: ").upper().strip()
 
@@ -75,7 +78,22 @@ def estadistica()
 
             #Aqui inicia el nuevo codigo base para las estadisticas
 
+            if datos:
+                datos.sort()   #Aqui esta guardada toda la informacion de la columna
+                cantidad = len(datos)
+                Maximo = max(datos)
+                Minimo = min(datos)
+                Prome = sum(datos)/cantidad
+                Mitad = cantidad // 2 # Realiza una division entera, eliminando asi decimales
+                
+                if cantidad % 2 == 1:  #Se identifica si es par o impar
+                    mediana = datos[Mitad] #Si es impar, se logra con facilidad la mediana
+                else:
+                    Mediana = (datos[Mitad-1] + datos [Mitad]) / 2   # Esto se hace en caso de que sea par
+                    #Es el promedio de la suma de los dos valores del medio
 
+                print (f"El valor maximo es {Maximo}, y el valor minimo es {Minimo} ")
+                print (f"El promedio es {Prome}, y la mediana es {Mediana} ")
 
 
 def graficar():
