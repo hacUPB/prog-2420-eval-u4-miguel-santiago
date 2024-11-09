@@ -1,5 +1,7 @@
 from FUNCION2 import *
 from FUNCION3 import *
+from FUNCION1 import *
+
 
 
 def mostrar_menu(opciones):
@@ -68,6 +70,7 @@ def sub_menu3():
 
 def eleg1():
     print("Elegiste Listar archivos o buscarlos")
+    listar_archivos_en_directorio()
 
 def eleg2():
     print("Elegiste Procesar archivos .txt")
@@ -110,7 +113,7 @@ def EleccionA1():
 
 def EleccionA2():
     print("Elegiste calcular Estadísticas")
-    def estadistica()
+    estadistica()
     
     
     
