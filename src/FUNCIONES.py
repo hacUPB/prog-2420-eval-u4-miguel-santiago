@@ -19,7 +19,7 @@ def listar_archivos_en_directorio():
 #Contar número de palabras**: Debe contar el número de palabras en el archivo de texto y mostrar el resultado.
 #Reemplazar una palabra por otra**: Debe permitir al usuario reemplazar una palabra por otra en el archivo de texto. La función debe recibir tanto la palabra a buscar, como la palabra por la que se tiene que reemplazar.
 
-import os
+
 def contar_palabras():  #Crear la función
     try: #try: El bloque try contiene el código que podría generar una excepción (un error). Python ejecuta este bloque de código, y si ocurre un error, salta al bloque except
         
@@ -74,7 +74,7 @@ def reemplazar_palabra():
 #data = var_archivo.read() 
 
 
-import os
+
 def contar_numero_de_caracteres():
     try:
 
@@ -181,7 +181,7 @@ def estadistica():
                 
 
 
-import matplotlib.pyplot as plt  # Cambia el alias a 'plt'
+
 
 def graficar():
     try:
