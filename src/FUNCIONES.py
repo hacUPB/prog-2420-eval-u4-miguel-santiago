@@ -1,5 +1,5 @@
 import os  
-import matplotlib.pyplot as gra
+
 
 def listar_archivos_en_directorio():
     ruta_directorio = os.path.dirname(os.path.abspath(__file__))  # os.path.abspath(__file__) devuelve la ruta absoluta del archivo actual
@@ -210,9 +210,9 @@ def graficar():
                     continue
 
             if datos:
-                plt.plot(datos)
-                plt.title(f"Gráfico de la columna: {columna}")
-                plt.show()
+                gra.plot(datos)
+                gra.title(f"Gráfico de la columna: {columna}")
+                gra.show()
             else:
                 print("No hay datos numéricos en la columna seleccionada.")
         else:
