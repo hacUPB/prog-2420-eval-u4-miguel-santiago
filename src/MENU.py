@@ -1,5 +1,5 @@
-from FUNCION3 import *
 from FUNCIONES import *
+import matplotlib.pyplot as gra
 
 
 
