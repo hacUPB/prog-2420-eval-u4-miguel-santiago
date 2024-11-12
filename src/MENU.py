@@ -1,6 +1,4 @@
 from FUNCIONES import *
-import matplotlib.pyplot as gra
-
 
 
 def mostrar_menu(opciones):
