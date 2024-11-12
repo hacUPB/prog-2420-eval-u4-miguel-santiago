@@ -1,4 +1,6 @@
-import os  # Agrega esta línea para importar el módulo os
+import os  
+import matplotlib.pyplot as gra
+
 def listar_archivos_en_directorio():
     ruta_directorio = os.path.dirname(os.path.abspath(__file__))  # os.path.abspath(__file__) devuelve la ruta absoluta del archivo actual
     archivos = os.listdir(ruta_directorio)  # os.listdir() devuelve una lista con los nombres de los archivos en el directorio
